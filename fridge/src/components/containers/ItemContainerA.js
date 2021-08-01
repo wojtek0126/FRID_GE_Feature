@@ -2,12 +2,12 @@
 /** @jsx jsx */
 import { Flex, jsx } from 'theme-ui'
 
-const ButtonPrimary = ({content}) => {
+const ItemContainerA = ({content}) => {
     return (
-        <Button sx={{
-            display: 'flex',
-            width: '25%',
-            height: '25%',
+        <Flex sx={{
+            flexDirection: 'column',
+            width: '100%',
+            height: '100%',
             backgroundColor: 'background',
             justifyContent: 'center',
             alignItems: 'center',
@@ -17,8 +17,8 @@ const ButtonPrimary = ({content}) => {
             padding: 3
         }}>
         {content}
-      </Button>
+      </Flex>
     )
 }
-ButtonPrimary
-export default ButtonPrimary
+
+export default ItemContainerA
