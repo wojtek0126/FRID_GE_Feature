@@ -1,13 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { Flex, jsx, Button } from 'theme-ui'
+import { Flex, jsx } from 'theme-ui'
 
-const ButtonPrimary = ({content}) => {
+const BasketItem
+ = ({content}) => {
     return (
-        <button sx={{
-            display: 'flex',
-            width: '25%',
-            height: '25%',
+        <Flex sx={{
+            width: '100%',
+            height: '100%',
             backgroundColor: 'background',
             justifyContent: 'center',
             alignItems: 'center',
@@ -17,8 +17,8 @@ const ButtonPrimary = ({content}) => {
             padding: 3
         }}>
         {content}
-      </button>
+      </Flex>
     )
 }
 
-export default ButtonPrimary
+export default BasketItem

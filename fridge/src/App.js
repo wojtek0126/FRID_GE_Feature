@@ -25,9 +25,13 @@ import Searchbar from './components/containers/Searchbar'
 import UserPanel from './components/containers/UserPanel'
 import SuccesDenyBox from './components/containers/SuccesDenyBox'
 import ConfirmBox from './components/containers/ConfirmBox'
+import EditUserDetails from './components/containers/EditUserDetails'
+import UserName from './components/containers/UserName'
+import BasketList from './components/containers/BasketList'
+import BasketItem from './components/containers/BasketItem'
+import BasketTotals from './components/containers/BasketTotals'
 import StandardText from './components/atoms/StandardText'
-
-
+import ButtonPrimary from './components/atoms/ButtonPrimary'
 
 
 function App() {
@@ -48,12 +52,25 @@ function App() {
                                      <>
                                     <StandardText content={'Register'} />
                                     <Form content={
-                                      'Register form'
+                                      <>
+                                      Register form
+                                      <ButtonPrimary content={'Submit'} />
+                                      </>
                                     } />
                                     <SuccesDenyBox content={
                                       <>
-                                    <Success content={'Success'} />
-                                    <Deny content={'Deny'} />
+                                    <Success content={
+                                        <>
+                                        Success
+                                        <ButtonPrimary content={'Close'} />
+                                        </>
+                                    } />
+                                    <Deny content={
+                                        <>
+                                        Deny
+                                        <ButtonPrimary content={'Close'} />
+                                        </>
+                                    } />
                                       </>
                                     } />
                                 
@@ -63,33 +80,53 @@ function App() {
                                      <>
                                     <StandardText content={'Login'} />
                                     <Form content={
-                                      'Login form'
+                                       <>
+                                       Login form
+                                       <ButtonPrimary content={'Submit'} />
+                                       </>
                                     } />
                                     <SuccesDenyBox content={
                                       <>
-                                    <Success content={'Success'} />
-                                    <Deny content={'Deny'} />
+                                    <Success content={
+                                        <>
+                                        Success
+                                        <ButtonPrimary content={'Close'} />
+                                        </>
+                                    } />
+                                    <Deny content={
+                                        <>
+                                        Deny
+                                        <ButtonPrimary content={'Close'} />
+                                        </>
+                                    } />
                                       </>
                                     } />
                                 
                                   </>
-                                  } />                      
-                                <Logout content={
-                                 <>
-                                  <StandardText content={'Logout'} />
-                                  <ConfirmBox content={'Yes or no popup'} />
-                                 </>
-                                  } />                      
+                                  } />                                                    
                                <Contact content={
                                      <>
                                     <StandardText content={'Contact'} />
                                     <Form content={
-                                      'Contact form'
+                                       <>
+                                       Contact form
+                                       <ButtonPrimary content={'Submit'} />
+                                       </>
                                     } />
                                     <SuccesDenyBox content={
                                       <>
-                                    <Success content={'Success'} />
-                                    <Deny content={'Deny'} />
+                                    <Success content={
+                                        <>
+                                        Success
+                                        <ButtonPrimary content={'Close'} />
+                                        </>
+                                    } />
+                                    <Deny content={
+                                        <>
+                                        Deny
+                                        <ButtonPrimary content={'Close'} />
+                                        </>
+                                    } />
                                       </>
                                     } />                                
                                   </>
@@ -100,12 +137,83 @@ function App() {
                               </>
                 } />  
                 <Banner content={'Banner'} />
-                <UserPanel content={'User panel'} />
+                <UserPanel content={
+                  <>
+                  <UserName content={'User name'} />
+                   <Basket content={
+                     <>
+                     Basket
+                     <BasketList content={
+                       <>
+                       Basket list
+                       <BasketTotals content={'Total to pay'} />
+                       <ButtonPrimary content={'To checkout'} />
+                       <ButtonPrimary content={'Hide basket'} />
+                       <BasketItem content={
+                            <>
+                            Item in basket
+                            <ButtonPrimary content={'Remove item'} />
+                            </>
+                       } />
+                       </>
+                     } />
+                     </>
+                   } /> 
+                   <Checkout content={'Checkout'} />  
+                   <EditUserDetails content={
+                                     <>
+                                    <StandardText content={'Edit details'} />
+                                    <Form content={
+                                        <>
+                                        User details form
+                                        <ButtonPrimary content={'Submit'} />
+                                        </>
+                                    } />
+                                    <ConfirmBox content={  <>
+                                      Confirm
+                                      <ButtonPrimary content={'Yes'} />
+                                      <ButtonPrimary content={'No'} />
+                                      </>} />
+                                    <SuccesDenyBox content={
+                                      <>
+                                    <Success content={
+                                         <>
+                                         Success
+                                         <ButtonPrimary content={'Close'} />
+                                         </>
+                                    } />
+                                    <Deny content={
+                                        <>
+                                        Deny
+                                        <ButtonPrimary content={'Close'} />
+                                        </>
+                                    } />
+                                      </>
+                                    } />
+                                
+                                  </>
+                                  } />                     
+                   <Logout content={
+                                 <>
+                                  <StandardText content={'Logout'} />
+                                  <ConfirmBox content={  <>
+                                      Confirm
+                                      <ButtonPrimary content={'Yes'} />
+                                      <ButtonPrimary content={'No'} />
+                                      </>} />
+                                  <Success content={
+                                      <>
+                                      Success
+                                      <ButtonPrimary content={'Close'} />
+                                      </>
+                                  } />
+                                 </>
+                                  } /> 
+                  </>
+                } />
                 <Searchbar content={'Searchbar'} />        
                 <Filters content={'Filters'} />           
-                <Fridge content={'Fridge'} />   
-                <Basket content={'Basket'} />  
-                <Checkout content={'Checkout'} />  
+                <Fridge content={'Fridge/Shop'} />                    
                 <Footer content={'Footer'} />  
               </>
              }/>
