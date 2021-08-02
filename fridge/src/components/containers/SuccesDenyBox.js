@@ -2,10 +2,10 @@
 /** @jsx jsx */
 import { Flex, jsx } from 'theme-ui'
 
-const ItemContainerA = ({content}) => {
+const SuccessDenyBox
+ = ({content}) => {
     return (
         <Flex sx={{
-            flexWrap: 'wrap',
             width: '100%',
             height: '100%',
             backgroundColor: 'background',
@@ -21,4 +21,4 @@ const ItemContainerA = ({content}) => {
     )
 }
 
-export default ItemContainerA
+export default SuccessDenyBox

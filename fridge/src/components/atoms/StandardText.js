@@ -2,10 +2,10 @@
 /** @jsx jsx */
 import { Flex, jsx } from 'theme-ui'
 
-const ItemContainerA = ({content}) => {
+const StandardText
+ = ({content}) => {
     return (
         <Flex sx={{
-            flexWrap: 'wrap',
             width: '100%',
             height: '100%',
             backgroundColor: 'background',
@@ -16,9 +16,9 @@ const ItemContainerA = ({content}) => {
             margin: 3,
             padding: 3
         }}>
-        {content}
+        <p>{content}</p>
       </Flex>
     )
 }
 
-export default ItemContainerA
+export default StandardText

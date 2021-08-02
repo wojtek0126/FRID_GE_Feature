@@ -23,6 +23,11 @@ import Deny from './components/containers/Deny'
 import Filters from './components/containers/Filters'
 import Searchbar from './components/containers/Searchbar'
 import UserPanel from './components/containers/UserPanel'
+import SuccesDenyBox from './components/containers/SuccesDenyBox'
+import ConfirmBox from './components/containers/ConfirmBox'
+import StandardText from './components/atoms/StandardText'
+
+
 
 
 function App() {
@@ -33,35 +38,61 @@ function App() {
           <MainContainerA content={
             <ItemContainerA content={
               <>
-                <Header content={'Hello shop!'} />    
+                <Header content={
+                  <StandardText content={'Hello shop!'} />
+                } />    
                 <Nav content={                
-                              <>
+                              <>                             
                               <About content={'About us'} />
-                                <Register content={
-                                  <>
+                              <Register content={
+                                     <>
+                                    <StandardText content={'Register'} />
                                     <Form content={
                                       'Register form'
                                     } />
+                                    <SuccesDenyBox content={
+                                      <>
+                                    <Success content={'Success'} />
+                                    <Deny content={'Deny'} />
+                                      </>
+                                    } />
+                                
                                   </>
                                   } />    
                                 <Login content={
                                      <>
+                                    <StandardText content={'Login'} />
                                     <Form content={
                                       'Login form'
                                     } />
+                                    <SuccesDenyBox content={
+                                      <>
                                     <Success content={'Success'} />
                                     <Deny content={'Deny'} />
+                                      </>
+                                    } />
+                                
                                   </>
                                   } />                      
                                 <Logout content={
-                                 'Logout'
+                                 <>
+                                  <StandardText content={'Logout'} />
+                                  <ConfirmBox content={'Yes or no popup'} />
+                                 </>
                                   } />                      
-                                <Contact content={
+                               <Contact content={
+                                     <>
+                                    <StandardText content={'Contact'} />
+                                    <Form content={
+                                      'Contact form'
+                                    } />
+                                    <SuccesDenyBox content={
                                       <>
-                                      <Form content={
-                                        'Contact form'
-                                      } />
-                                    </>
+                                    <Success content={'Success'} />
+                                    <Deny content={'Deny'} />
+                                      </>
+                                    } />                                
+                                  </>
                                   } />                    
                                 <AdminPanel content={
                                   'AdminPanel'
