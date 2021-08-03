@@ -30,8 +30,13 @@ import UserName from './components/containers/UserName'
 import BasketList from './components/containers/BasketList'
 import BasketItem from './components/containers/BasketItem'
 import BasketTotals from './components/containers/BasketTotals'
+import OrderTotal from './components/containers/OrderTotal'
 import StandardText from './components/atoms/StandardText'
 import ButtonPrimary from './components/atoms/ButtonPrimary'
+import ButtonSearch from './components/atoms/ButtonSearch'
+import InputField from './components/atoms/InputField'
+
+
 
 
 function App() {
@@ -43,7 +48,7 @@ function App() {
             <ItemContainerA content={
               <>
                 <Header content={
-                  <StandardText content={'Hello shop!'} />
+                  'Hello shop!'
                 } />    
                 <Nav content={                
                               <>                             
@@ -139,10 +144,10 @@ function App() {
                 <Banner content={'Banner'} />
                 <UserPanel content={
                   <>
-                  <UserName content={'User name'} />
+                  <UserName content={'Welcome logged user'} />
                    <Basket content={
                      <>
-                     Basket
+                     <StandardText content={'Basket'} />
                      <BasketList content={
                        <>
                        Basket list
@@ -159,10 +164,31 @@ function App() {
                      } />
                      </>
                    } /> 
-                   <Checkout content={'Checkout'} />  
+                   <Checkout content={
+                     <>
+                      <StandardText content={'Checkout'} />
+                      <OrderTotal content={'Order total'} />
+                      <Form content={
+                                       <>
+                                       Checkout form
+                                       <ButtonPrimary content={'Go to payment'} />
+                                       <ButtonPrimary content={
+                                         <>
+                                         Back to basket
+                                         <ConfirmBox content={  <>
+                                      Confirm
+                                      <ButtonPrimary content={'Yes'} />
+                                      <ButtonPrimary content={'No'} />
+                                      </>} />
+                                         </>
+                                       } />
+                                       </>
+                                    } />                
+                     </>
+                   } />  
                    <EditUserDetails content={
                                      <>
-                                    <StandardText content={'Edit details'} />
+                                    <StandardText content={'Edit user'} />                                  
                                     <Form content={
                                         <>
                                         User details form
@@ -211,7 +237,13 @@ function App() {
                                   } /> 
                   </>
                 } />
-                <Searchbar content={'Searchbar'} />        
+                <Searchbar content={
+                  <>
+                  Search bar
+                  <InputField content={'Input field'} />
+                  <ButtonSearch content={'Search button'} />
+                  </>
+                } />        
                 <Filters content={'Filters'} />           
                 <Fridge content={'Fridge/Shop'} />                    
                 <Footer content={'Footer'} />  

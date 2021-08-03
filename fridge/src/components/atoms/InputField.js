@@ -2,11 +2,9 @@
 /** @jsx jsx */
 import { Flex, jsx } from 'theme-ui'
 
-const Form
- = ({content}) => {
+const InputField = ({content}) => {
     return (
         <Flex sx={{
-            flexDirection: 'column',
             width: '100%',
             height: '100%',
             backgroundColor: 'background',
@@ -22,4 +20,4 @@ const Form
     )
 }
 
-export default Form
+export default InputField

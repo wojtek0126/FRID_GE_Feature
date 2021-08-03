@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { Flex, jsx } from 'theme-ui'
 
-const Form
+const OrderTotal
  = ({content}) => {
     return (
         <Flex sx={{
@@ -22,4 +22,4 @@ const Form
     )
 }
 
-export default Form
+export default OrderTotal

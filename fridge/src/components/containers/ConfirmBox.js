@@ -6,6 +6,7 @@ const ConfirmBox
  = ({content}) => {
     return (
         <Flex sx={{
+            flexDirection: 'column',
             width: '100%',
             height: '100%',
             backgroundColor: 'background',

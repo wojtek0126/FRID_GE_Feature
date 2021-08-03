@@ -1,14 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { Flex, jsx } from 'theme-ui'
+import { Flex, jsx, Button } from 'theme-ui'
 
-const Form
- = ({content}) => {
+const ButtonSearch = ({content}) => {
     return (
-        <Flex sx={{
-            flexDirection: 'column',
-            width: '100%',
-            height: '100%',
+        <button sx={{
+            display: 'flex',
+            width: '25%',
+            height: '25%',
             backgroundColor: 'background',
             justifyContent: 'center',
             alignItems: 'center',
@@ -18,8 +17,8 @@ const Form
             padding: 3
         }}>
         {content}
-      </Flex>
+      </button>
     )
 }
 
-export default Form
+export default ButtonSearch
