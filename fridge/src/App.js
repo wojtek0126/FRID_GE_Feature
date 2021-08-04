@@ -17,7 +17,7 @@ import Contact from './components/containers/Contact'
 import About from './components/containers/About'
 import Footer from './components/containers/Footer'
 import Form from './components/containers/Form'
-import Item from './components/containers/Item'
+import ShopItem from './components/containers/ShopItem'
 import Success from './components/containers/Success'
 import Deny from './components/containers/Deny'
 import Filters from './components/containers/Filters'
@@ -31,12 +31,13 @@ import BasketList from './components/containers/BasketList'
 import BasketItem from './components/containers/BasketItem'
 import BasketTotals from './components/containers/BasketTotals'
 import OrderTotal from './components/containers/OrderTotal'
+import OptionBox from './components/containers/OptionBox'
+import StoreCanvas from './components/containers/StoreCanvas'
+import ShopItemImage from './components/containers/ShopItemImage'
 import StandardText from './components/atoms/StandardText'
 import ButtonPrimary from './components/atoms/ButtonPrimary'
 import ButtonSearch from './components/atoms/ButtonSearch'
 import InputField from './components/atoms/InputField'
-
-
 
 
 function App() {
@@ -238,14 +239,34 @@ function App() {
                   </>
                 } />
                 <Searchbar content={
-                  <>
-                  Search bar
+                  <>                 
                   <InputField content={'Input field'} />
                   <ButtonSearch content={'Search button'} />
                   </>
                 } />        
-                <Filters content={'Filters'} />           
-                <Fridge content={'Fridge/Shop'} />                    
+                <Filters content={
+                  <>
+                    <OptionBox content={'Fresh, packed, frozen'} />
+                    <OptionBox content={'Fruit, Veg, Ice cream, Drinks, Ice cubes, other'} />
+                    <OptionBox content={'Lowest price, Longest use date'} />
+                  </>
+                } />           
+                <Fridge content={
+                  <>
+                    <StoreCanvas content={
+                      <>Store canvas: shelves or fridge
+                        <ShopItem content={
+                          <>Shop item
+                            <ShopItemImage content={'Item image'} />
+                            <ButtonPrimary content={'Item description and price'} />
+                            <ButtonPrimary content={'Add to cart'} />
+                            <ButtonPrimary content={'Go to cart'} />
+                          </>
+                        } />
+                      </>
+                      } />
+                  </>
+                } />                    
                 <Footer content={'Footer'} />  
               </>
              }/>

@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { Flex, jsx } from 'theme-ui'
 
-const Item
+const ShopItem
  = ({content}) => {
     return (
         <Flex sx={{
@@ -21,4 +21,4 @@ const Item
     )
 }
 
-export default Item
+export default ShopItem
